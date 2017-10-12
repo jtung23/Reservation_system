@@ -1,0 +1,34 @@
+<script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+
+
+<html>
+<body>
+<div id = "whatever">whatever</div>
+<div id = "tables"></div>
+<div id = "waitlist"></div>
+</body>
+</html>
+
+
+<script>
+
+	var newDiv = $("<div>");
+	newDiv.text = "randomtext";
+	$("#tables").append(newDiv);
+	
+// $.get("/api/tables", function(data) {
+
+// 	for (var i = 0; i < data.length; i++) {
+// 		var id = data[i].uniqueId;
+// 		var newDiv = $("<div>");
+// 		newDiv.text = "randomtext";
+// 		$("#tables").append(newDiv);
+// 	}
+
+// 	console.log(data);
+// });
+
+</script>
