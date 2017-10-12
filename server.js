@@ -54,7 +54,7 @@ app.get("/", function(req, res) {
   res.sendFile(path.join(__dirname, "restaurant.html"));
 });
 
-app.get("/viewTables", function(req, res) {
+app.get("/ViewTables", function(req, res) {
   res.sendFile(path.join(__dirname, "viewTables.html"));
 });
 
