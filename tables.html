@@ -7,6 +7,15 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <script src="https://code.jquery.com/jquery.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style type="text/css">
+  .well {
+    background-color: grey;
+    color: red;
+    height: 20px;
+    margin-bottom:4px;
+    margin-top:4px;
+  }
+  </style>
 </head>
 <body>
     <div class="container">
@@ -55,10 +64,10 @@
 <script>
 
 $.get("/api/tables", function(data) {
-
   for (var i = 0; i < data.length; i++) {
     var id = data[i].uniqueId;
-    var newDiv = $("<div>" + id + "</div>");
+    var count = i+1;
+    var newDiv = $("<div class='well'>" + count + " Id: " + id + "</div>");
     $("#tables").append(newDiv);
 
     console.log("ant")
