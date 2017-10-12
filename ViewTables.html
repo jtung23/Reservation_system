@@ -79,8 +79,7 @@
         };
         console.log(newReservation);
          var currentUrl = window.location.origin;
-          $.post(currentUrl + "api/tables", newReservation,
-            function(data) {
+          $.post(currentUrl + "api/tables", newReservation, function(data) {
               if (data === true){
                 alert("youre booked!")
               }
