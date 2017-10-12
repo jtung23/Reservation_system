@@ -26,6 +26,7 @@
           <h4 class="panel-title">Current Reservations</h4>
         </div>
         <div class="panel-body"></div>
+        <div id ="tables"></div>
       </div>
     </div>
 
@@ -50,5 +51,29 @@
    </footer>
   
 </body>
+
+<script>
+
+$.get("/api/tables", function(data) {
+
+  for (var i = 0; i < data.length; i++) {
+    var id = data[i].uniqueId;
+    var newDiv = $("<div>" + id + "</div>");
+    $("#tables").append(newDiv);
+
+    console.log("ant")
+
+  }
+
+  console.log(data);
+});
+
+
+  // var newDiv = $("<div>");
+  // newDiv.text = "randomtext";
+  // $("#tables").append(newDiv);
+
+</script>
+
 </html>
 
