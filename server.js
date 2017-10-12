@@ -55,7 +55,7 @@ app.get("/", function(req, res) {
 });
 
 app.get("/ViewTables", function(req, res) {
-  res.sendFile(path.join(__dirname, "viewTables.html"));
+  res.sendFile(path.join(__dirname, "ViewTables.html"));
 });
 
 app.get("/tables", function(req, res) {
