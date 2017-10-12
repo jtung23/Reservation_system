@@ -51,11 +51,11 @@ var waitingList = [{
 
 // Basic route that sends the user first to the AJAX Page
 app.get("/", function(req, res) {
-  res.sendFile(path.join(__dirname, "home.html"));
+  res.sendFile(path.join(__dirname, "restaurant.html"));
 });
 
-app.get("/reservations", function(req, res) {
-  res.sendFile(path.join(__dirname, "reservations.html"));
+app.get("/viewTables", function(req, res) {
+  res.sendFile(path.join(__dirname, "viewTables.html"));
 });
 
 app.get("/tables", function(req, res) {
@@ -68,7 +68,7 @@ app.get("/api/tables", function(req, res) {
 });
 
 // Get all characters
-app.get("/api/reservations", function(req, res) {
+app.get("/api/waitingList", function(req, res) {
   res.json(waitingList);
 });
 
